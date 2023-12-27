@@ -1,0 +1,119 @@
+.login {
+  height: 100vh;
+  background-color: lightsalmon;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    width: 60%;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    min-height: 600px;
+    overflow: hidden;
+
+    .left {
+      align-items: center;
+      flex: 1;
+      background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
+        url("https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600")
+          center;
+      background-size: cover;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: white;
+
+      h1 {
+        font-size: 60px;
+        text-align: center;
+      }
+      span {
+        font-size: 14px;
+      }
+      
+      button {
+        width: 150px;
+        margin-right: 100%;
+        padding: 10px;
+        border: 3px solid;
+        background-color: orangered;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+
+    .right {
+      flex: 1;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+      color: #555;
+      }
+      
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .input-group {
+          position: relative;
+         }
+         
+         .input {
+          border: 2.5px solid black;
+          border-radius: 1rem;
+          background: none;
+          padding: 1rem;
+          padding-right: 3rem;
+          padding-left: 2rem;
+          font-size: 1rem;
+          color: black;
+          transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+         }
+         
+         .user-label {
+          position: absolute;
+          left: 15px;
+          top: 2.5px;
+          color: gray;
+          pointer-events: none;
+          transform: translateY(1rem);
+          transition: 150ms cubic-bezier(0.4,0,0.2,1);
+         }
+         
+         .input:focus, input:valid {
+          outline: none;
+          border: 3px solid orangered;
+         }
+         
+         .input:focus ~ label, input:valid ~ label {
+          transform: translateY(-50%) scale(0.8);
+          background-color: white;
+          padding: 0 .2em;
+          color: orangered;
+         }
+        
+        button {
+          margin-left: 25%;
+          width: 50%;
+          padding: 10px;
+          border: 5px solid lightgray;
+          border-radius: 10px;
+          background-color: orangered;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
